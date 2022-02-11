@@ -1,19 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <title>Matir Bank</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Matir Bank</title>
+  </head>
+  <body>
+    <body class="col-12 mx-auto pt-5">
+      <h1 class="text-center">Matir Bank</h1>
+      <div>
+        <div
+          id="outerDivBank"
+          class="mt-5 ms-5 me-5 p-5 d-flex justify-content-evenly"
+        >
+          <div id="deposite" class="col-4 bg-light m-2 p-3">
+            <h3>Deposite</h3>
+            <h5>$ <span id="initialDepositeAmount">0.0</span></h5>
+          </div>
 
-  <h1>Bank</h1>
-  
+          <div id="withdraw" class="col-4 bg-light m-2 p-3">
+            <h3>Withdraw</h3>
+            <h5>$ <span id="withdrawAmount">0.0</span></h5>
+          </div>
 
+          <div id="totalAmount" class="col-4 bg-light m-2 p-3">
+            <h3>Total Amount</h3>
+            <h5>$ <span id="initialTotalAmount">1000.0</span></h5>
+          </div>
+        </div>
+        <div class="row g-2 p-2 mt-2 ms-5 me-5 bg-light">
+          <div class="col-6">
+            <div>
+              <div class="form-floating">
+                <input
+                  class="form-control"
+                  id="inputDepositeAmount"
+                  placeholder="name@example.com"
+                  value=""
+                />
+                <label for="floatingInputGrid">Deposite</label>
+              </div>
+              <button id="depositeButton"  type="button" class="btn btn-success mt-3 mb-3">
+                Deposite
+              </button>
+            </div>
+          </div>
 
+          <div class="col-6">
+            <div>
+              <div class="form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputWithdrawAmount"
+                  placeholder="name@example.com"
+                  value=""
+                />
+                <label for="floatingInputGrid">Withdraw</label>
+              </div>
+              <button id="withdrawButton" type="button" class="btn btn-danger mt-3 mb-3">Wthdraw</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="js/banking.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
