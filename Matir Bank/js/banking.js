@@ -12,7 +12,7 @@ function updateTotalValue(operation, amount) {
     if (newTotalValue >= 0) {
       initialTotalAmount.innerHTML = newTotalValue;
     } else {
-      console.log('acount limit crossed');
+      alert('not sufficient amount');
     }
   }
 }
@@ -20,11 +20,18 @@ function updateTotalValue(operation, amount) {
 function depositeFunction() {
   let initialAmount = document.getElementById('initialDepositeAmount');
   let inputDepositeAmount = document.getElementById('inputDepositeAmount');
-  let newDepositeAmount =
-    parseFloat(initialAmount.innerHTML) + parseFloat(inputDepositeAmount.value);
-  console.log(newDepositeAmount);
-  initialAmount.innerHTML = inputDepositeAmount.value;
-  updateTotalValue('deposite', parseFloat(inputDepositeAmount.value));
+  if (isNaN(inputDepositeAmount.value)) {
+    alert('Give valid value');
+  } else if (inputDepositeAmount.value < 0) {
+    alert('Give positive value');
+  } else {
+    let newDepositeAmount =
+      parseFloat(initialAmount.innerHTML) +
+      parseFloat(inputDepositeAmount.value);
+    console.log(newDepositeAmount);
+    initialAmount.innerHTML = inputDepositeAmount.value;
+    updateTotalValue('deposite', parseFloat(inputDepositeAmount.value));
+  }
   inputDepositeAmount.value = '';
 }
 
@@ -34,7 +41,13 @@ withdrawButton.addEventListener('click', withdrawFunction);
 function withdrawFunction() {
   let withdrawAmount = document.getElementById('withdrawAmount');
   const inputWithdrawAmount = document.getElementById('inputWithdrawAmount');
-  withdrawAmount.innerHTML = inputWithdrawAmount.value;
-  updateTotalValue('withdraw', parseFloat(inputWithdrawAmount.value));
+  if (isNaN(inputWithdrawAmount.value)) {
+    alert('Give valid value');
+  } else if (inputWithdrawAmount.value < 0) {
+    alert('Give positive value');
+  } else {
+    withdrawAmount.innerHTML = inputWithdrawAmount.value;
+    updateTotalValue('withdraw', parseFloat(inputWithdrawAmount.value));
+  }
   inputWithdrawAmount.value = '';
 }

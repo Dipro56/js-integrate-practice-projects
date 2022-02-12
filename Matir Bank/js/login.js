@@ -6,7 +6,7 @@ function credentialsCheck(email, password) {
   if (email == 'test@gmail.com' && password == '12345') {
     window.location.href = 'bank.html';
   } else {
-    console.log('login failed ');
+    alert('wrong credential');
   }
 }
 
