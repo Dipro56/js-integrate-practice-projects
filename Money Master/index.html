@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Expense Balancer</title>
+  </head>
+  <body>
+    <main>
+      <div class="container bg-danger">
+        <div class="row">
+          <div class="mt-5 p-3 ivory-color-background col-12">
+            <h1 class="text-center">Expense Balancer</h1>
+          </div>
+          <div class="row">
+            <div
+              class="col-lg-7 col-md-7 col-sm-12 mt-3 mb-3 d-flex align-items-center"
+            >
+              <img
+                class="container-fluid"
+                src="resources/images/background.PNG"
+                alt=""
+                srcset=""
+              />
+            </div>
+
+            <div class="col-lg-5 col-md-5 col-sm-12 col mt-3 mb-3">
+              <div class="ivory-color-background m-2 p-2 container-fluid">
+                <!-- income section -->
+                <div class="row m-2 d-flex justify-content-center">
+                  <h4 class="text-center">Income</h4>
+                  <div class="row mt-3 d-flex justify-content-center">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12 me-1">
+                      <h6>Income:</h6>
+                    </div>
+                    <div class="col-lg-8 col-mid-8 col-sm-8 col-12 ms-1">
+                      <input
+                        class="container-fluid"
+                        type="text"
+                        id="incomeInput"
+                        name="fname"
+                      />
+                    </div>
+                  </div>
+                  <h6
+                    id="inputErrorMessage"
+                    style="color: red; display: none"
+                    class="text-center"
+                  ></h6>
+                </div>
+
+                <!-- expense section  -->
+                <div class="col-12 containe-fluid p-3">
+                  <h4 class="text-center">Expense</h4>
+                  <div class="d-flex flex-column p-2 container-fluid">
+                    <!-- food  -->
+                    <div>
+                      <div class="row mt-2 d-flex justify-content-center">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-12 me-1">
+                          <h6>Food:</h6>
+                        </div>
+                        <div class="col-lg-8 col-mid-8 col-sm-8 col-12">
+                          <input
+                            class="container-fluid"
+                            type="text"
+                            id="foodInput"
+                            name="fname"
+                          />
+                        </div>
+                      </div>
+                      <h6
+                        id="foodErrorMessage"
+                        style="color: red; display: none"
+                        class="text-center"
+                      ></h6>
+                    </div>
+
+                    <!-- rent -->
+
+                    <div>
+                      <div class="row mt-2 d-flex justify-content-center">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-12 me-1">
+                          <h6>Rent:</h6>
+                        </div>
+                        <div class="col-lg-8 col-mid-8 col-sm-8 col-12">
+                          <input
+                            class="container-fluid"
+                            type="text"
+                            id="rentInput"
+                            name="fname"
+                          />
+                        </div>
+                      </div>
+                      <h6
+                        id="rentErrorMessage"
+                        style="color: red; display: none"
+                        class="text-center"
+                      >
+                        Rent error message
+                      </h6>
+                    </div>
+
+                    <!-- clothes -->
+
+                    <div>
+                      <div class="row mt-2 d-flex justify-content-center">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-12 me-1">
+                          <h6>Clothes:</h6>
+                        </div>
+                        <div class="col-lg-8 col-mid-8 col-sm-8 col-12">
+                          <input
+                            class="container-fluid"
+                            type="text"
+                            id="clothesInput"
+                            name="fname"
+                          />
+                        </div>
+                        <h6
+                          id="clothesErrorMessage"
+                          style="color: red; display: none"
+                          class="text-center"
+                        >
+                          <!-- Error message -->
+                        </h6>
+                      </div>
+                    </div>
+
+                    <!-- calculate button  -->
+                    <div class="d-flex justify-content-center mt-3">
+                      <button id="calculationButton" class="btn btn-danger">
+                        Calculation
+                      </button>
+                    </div>
+
+                    <!-- total expense and balance -->
+                    <div class="d-flex flex-row justify-content-center mt-3">
+                      <h6 class="text-center">
+                        Total Expenses : <span id="expensesOutput"></span>
+                      </h6>
+                    </div>
+                    <div>
+                      <h6
+                        id="totalExpensesErrorMessage"
+                        style="color: red; display: none"
+                        class="text-center"
+                      ></h6>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center mt-1">
+                      <h6 class="text-center">Balance : <span id="balanceOutput"></span></h6>
+                    </div>
+                    <div>
+                      <h6
+                        id="balanceErrorMessage"
+                        style="color: red; display: none"
+                        class="text-center"
+                      ></h6>
+                    </div>
+
+                    <!-- saving section -->
+
+                    <div
+                      class="row d-flex justify-content-center align-items-center mt-2"
+                    >
+                      <div
+                        class="col-lg-2 col-md-2 col-sm-2 col-3 mt-2 me-1 d-flex justify-content-center"
+                      >
+                        <h6 class="text-center">Save:</h6>
+                      </div>
+
+                      <div class="col-lg-5 col-md-5 col-sm-5 col-8 d-flex mt-2">
+                        <input
+                          class="container-fluid"
+                          type="text"
+                          id="savingAmountInput"
+                          name="fname"
+                          style="padding-left: 3px"
+                        />
+                      </div>
+
+                      <div
+                        class="col-lg-1 col-md-1 col-sm-1 col-12 d-flex justify-content-center"
+                      >
+                        <h6 class="mt-2 text-center">%</h6>
+                      </div>
+
+                      <div
+                        class="col-lg-2 col-md-3 col-sm-3 col-12 d-flex justify-content-center mt-2 container-fluid"
+                      >
+                        <button id="saveButton" class="btn btn-danger">
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <h6
+                        id="saveInputErrorMessage"
+                        style="color: red; display: none"
+                        class="text-center"
+                      ></h6>
+                    </div>
+
+                    <!-- saving amount -->
+                    <div class="d-flex flex-row justify-content-center mt-3">
+                      <h6 class="text-center">
+                        Saving amount : <span id="savingAmountOutput"></span>
+                      </h6>
+                    </div>
+                    <div d-flex  justify-content-center>
+                      <h6
+                        id="savingBalanceErrorMessage"
+                        style="color: red; display: block"
+                        class="text-center"
+                      ></h6>
+                    </div>
+
+                    <!-- remaining balance -->
+                    <div class="d-flex flex-row justify-content-center mt-3 ">
+                      <h6 class="text-center">
+                        Remaining Balance :
+                        <span id="remainingBalanceOutput"></span>
+                      </h6>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <h6
+                        id="remainingBalanceErrorMessage"
+                        style="color: red; display: block"
+                        class="text-center"
+                      ></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- js files  -->
+    <script src="js/calculation.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

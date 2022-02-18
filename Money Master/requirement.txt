@@ -1,0 +1,19 @@
+Assignment 5 requirements 
+
+Basic :
+1.Change website name and use a relevent poicture.
+2.Make website responsive for mobile and desktop.
+3.For mobile top to bottom serial : name > image > calculation
+4.Do the calculation part. It contains : income,balance and expreses.
+5.Expense got 3 sub field : 1.Food , 2.Rent ,3.Clothes.
+6.Error handle : for string , negative value and meaning full input.(Expemses can't be greater than income).
+7.Error message will be showed for worng value .(not console log)
+
+
+Bonus :
+1.Clean code.
+2.Use function.
+3.Meaningful name and comment.
+4.Minimum 5 commit.
+5.Save % form income and relevent calculation.
+6.Error hanlde in save % calculation.
